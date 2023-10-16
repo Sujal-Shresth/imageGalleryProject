@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+#bg{
+    background-image: url('images/bgimg.jpg');
+    background-size: cover;
+    height: 60vh;
+    z-index: -1;
+    box-shadow: 0px 20px 60px 50px grey;;
+}
+
+#black{
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.443);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#headings{
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    padding: 12.5vh;
+}
+
+#headings h1{
+    font-size: 7.5vh;
+    padding: 4vh;
+}
+
+#headings h3{
+    font-size: 2.5vh;
+}
+
+#galleryHeading{
+    text-align: center;
+    font-size: 7.5vh;
+    color: rgba(32, 32, 56, 0.795);
+    margin: 5vh;
+}
+
+#gallery {
+    box-shadow: -20px -20px 50px 50px rgba(197, 215, 230, 0.658);
+    background-color: rgba(197, 215, 230, 0.658);
+    margin: 10px;
+  }
+  
+#gallery img {
+    height: 30vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 5px grey;
+    cursor: pointer; 
+}
+
+#image{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 80vw;
+    left: 10vw;
+    top: 10vh;
+    height: 80vh;
+    box-shadow: 5px 5px 25px 5px grey;
+    background-color: rgba(23, 37, 49, 0.662);
+    color: beige;
+    border-radius: 20px;
+}
+
+#cross{
+    position: absolute;
+    top: 5vh;
+    right: 2vw;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: rgba(24, 250, 175, 0.404);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+#image span:hover{
+    color: rgb(172, 199, 240);
+}
+
+#image img{
+    border-radius: 20px;
+    box-shadow: 5px 5px 25px 5px grey;
+    height: 70vh;
+}
+
+#desktop{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30vw, auto));
+    grid-auto-rows: min-content(auto,30vh);
+    column-gap: 5px;
+    row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+    margin: 10vh 0px;
+    grid-template-areas: "image image type" "image image type";
+}
+#desktop div{
+    grid-area: type;
+}
+#mobile{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15vw, auto));
+    grid-auto-rows: min-content(auto,30vh);
+    column-gap: 5px;
+    row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+    margin: 10vh 2.5vw;
+}
+
+#mobile div{
+    grid-row: span 2;
+}
+
+#mobile div, #desktop div{
+    font-size: 8vh;
+    font-weight: 900 ;
+    color: rgb(67, 74, 95);
+}
