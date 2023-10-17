@@ -63,6 +63,11 @@
     cursor: pointer; 
 }
 
+#gallery img:hover{
+    box-shadow: 5px 5px 25px  rgba(212, 255, 0, 0.685);
+
+}
+
 #image{
     display: none;
     justify-content: center;
